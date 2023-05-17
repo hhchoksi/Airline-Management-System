@@ -108,6 +108,25 @@
 				padding: 20px;
 			}
 		}
+
+		.signup-button {
+			background-color: #ffffff;
+			color: #ff6600;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			width: 100%;
+			margin-bottom: 10px;
+			transition: all 0.3s ease-in-out;
+			margin-left: auto;
+		}
+
+		.signup-button:hover {
+			background-color: #ff6600;
+			color: #ffffff;
+			box-shadow: 0px 0px 10px #ff6600;
+		}
 	</style>
 </head>
 <body>
@@ -122,6 +141,8 @@
 			<input type="password" placeholder="Enter Password" name="password" required>
 
 			<button type="submit">Login</button>
+			<button type="button" class="signup-button" onclick="location.href='/signup';">Sign up</button>
+
 			<label class="remember">
 				<input type="checkbox" checked="checked" name="remember"> Remember me
 			</label>
@@ -137,9 +158,10 @@
 					<i class="fas fa-info-circle"></i> Help
 				</div>
 			</div>
-			</form>
-		</div>
+		</form>
+		
+	</div>
 	
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	</body>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
 </html>

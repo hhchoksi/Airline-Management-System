@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DHM Airline Management - Signup</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<style>
+		body {
+			background-color: #333333;
+			color: #ffffff;
+			font-family: 'Montserrat', Arial, sans-serif;
+		}
+
+		h1 {
+			text-align: center;
+			font-weight: 700;
+			margin-bottom: 30px;
+		}
+
+		.container {
+			background-color: #111111;
+			padding: 50px;
+			border-radius: 10px;
+			max-width: 500px;
+			margin: auto;
+			margin-top: 50px;
+		}
+
+		h1 {
+			text-align: center;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		h2 {
+			text-align: center;
+			font-weight: 400;
+			margin-bottom: 30px;
+		}
+
+		input[type=text], input[type=password], input[type=email] {
+			width: 100%;
+			padding: 10px;
+			margin: 5px 0 20px 0;
+			display: inline-block;
+			border: none;
+			background: #f1f1f1;
+			border-radius: 10px;
+		}
+
+		button[type=submit] {
+			background-color: #ff6600;
+			color: #ffffff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			width: 100%;
+			margin-bottom: 10px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		button[type=submit]:hover {
+			background-color: #ffffff;
+			color: #ff6600;
+			box-shadow: 0px 0px 10px #ff6600;
+		}
+
+		.container label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: 700;
+		}
+
+		.remember {
+			display: inline-block;
+			margin-bottom: 10px;
+			font-weight: 400;
+		}
+
+		.pswhint {
+			text-align: right;
+			margin-bottom: 10px;
+		}
+
+		.pswhint a {
+			color: #ffffff;
+		}
+
+		.widget {
+			background-color: #222222;
+			padding: 10px;
+			border-radius: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 14px;
+			margin-top: 20px;
+		}
+
+		.widget i {
+			margin-right: 5px;
+		}
+
+		@media screen and (max-width: 600px) {
+			.container {
+				padding: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>DHM Airlines</h1>
+	<h2>Join Us Today!</h2>
+	<div class="container">
+		<form action="/signup" method="post">
+			<label for="firstName"><b>First Name</b></label>
+			<input type="text" placeholder="Enter First Name" name="firstName" required>
+
+            <label for="lastName"><b>Last Name</b></label>
+			<input type="text" placeholder="Enter Last Name" name="lastName" required>
+
+			<label for="email"><b>Email</b></label>
+			<input type="email" placeholder="Enter Email" name="email" required>
+
+			<label for="username"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" name="username" required>
+
+			<label for="password"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="password" required>
+
+			<button type="submit">Signup</button>
+			
+			<div class="widget">
+				<div>
+					<i class="fas fa-globe"></i> Language: English (US)
+				</div>
+				<div>
+					<i class="fas fa-info-circle"></i> Privacy Policy
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
