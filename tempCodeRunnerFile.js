@@ -1,1 +1,1 @@
-lastName
+ res.render('available_flights', { flights: rows,});

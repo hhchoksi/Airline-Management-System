@@ -34,7 +34,7 @@ app.post('/login', async (req, res) => {
   try {
     const [rows] = await conn.query('SELECT * FROM User WHERE Username = ? AND Password = ?', [username, password]);
     if (rows.length > 0) {
-      res.sendFile(__dirname + '/ticket-booking.html');
+      res.sendFile(__dirname + '/flight_search.html');
     } else {
       res.send('Invalid username or password');
     }
@@ -48,13 +48,13 @@ app.post('/login', async (req, res) => {
 
 // Code to search flights based on user input
 app.post('/search-flights', async (req, res) => {
-  const { origin, destination, numPassengers, departureDate } = req.body;
+  const { origin, destination } = req.body;
   const conn = await pool.getConnection();
 
   try {
-    const [rows] = await conn.query('SELECT * FROM Flight WHERE DepartureAirportCode = ? AND ArrivalAirportCode = ? AND SeatsAvailable >= ? AND DATE(DepartureTime) = ?', [origin, destination, numPassengers, departureDate]);
-    res.render('available_flights', { flights: rows, numPassengers, departureDate });
-    console.log(rows);
+    const [rows] = await conn.query('SELECT * FROM Flight WHERE DepartureAirportCode = ? AND ArrivalAirportCode = ?  ', [origin, destination]);
+    // res.render('available_flights', { flights: rows,});
+    res.send(rows);
   } catch (err) {
     console.error(err);
     res.status(500).send('Server error');
